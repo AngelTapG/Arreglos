@@ -1,0 +1,44 @@
+departamentos = ["Ropa", "Deportes", "Juguetería"]
+ventas = [[0]*12 for _ in range(3)]  
+
+def insertar_ventas(departamento):
+    if departamento in departamentos:
+        index = departamentos.index(departamento)
+        print(f"Inserte las ventas para el departamento de {departamento}:")
+        for i in range(12):
+            ventas[index][i] = float(input(f"Mes {i + 1}: "))
+    else:
+        print("Departamento no encontrado.")
+
+def buscar_venta(departamento, mes):
+    if departamento in departamentos and 1 <= mes <= 12:
+        index = departamentos.index(departamento)
+        print(f"Ventas del departamento de {departamento} en el mes {mes}: {ventas[index][mes - 1]}")
+    else:
+        print("Departamento o mes inválido.")
+
+def eliminar_ventas(departamento):
+    if departamento in departamentos:
+        index = departamentos.index(departamento)
+        ventas[index] = [0] * 12
+        print(f"Ventas del departamento de {departamento} han sido eliminadas.")
+    else:
+        print("Departamento no encontrado.")
+
+def mostrar_ventas():
+    for i, departamento in enumerate(departamentos):
+        print(f"Ventas del departamento de {departamento}:")
+        for j in range(12):
+            print(f"Mes {j + 1}: {ventas[i][j]}")
+        print()
+
+insertar_ventas("Ropa")
+insertar_ventas("Deportes")
+insertar_ventas("Juguetería")
+
+mostrar_ventas()
+
+buscar_venta("Ropa", 3) 
+eliminar_ventas("Deportes") 
+
+mostrar_ventas()
