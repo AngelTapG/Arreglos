@@ -32,6 +32,5 @@ def mostrar_ventas():
         print(f"{departamento: <10}:", end=" ")
         for j in range(12):
             print(f"{ventas[i][j]:7.2f}", end=" ")
-        print()  # Nueva línea al final de cada departamento
-
+        print() 
 
