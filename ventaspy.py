@@ -34,14 +34,4 @@ def mostrar_ventas():
             print(f"{ventas[i][j]:7.2f}", end=" ")
         print()  # Nueva línea al final de cada departamento
 
-# Ejemplo de uso
-insertar_ventas("Ropa")
-insertar_ventas("Deportes")
-insertar_ventas("Juguetería")
 
-mostrar_ventas()
-
-buscar_venta("Ropa", 3) 
-eliminar_ventas("Deportes") 
-
-mostrar_ventas()3
