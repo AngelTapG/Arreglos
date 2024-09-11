@@ -32,5 +32,16 @@ def mostrar_ventas():
         print(f"{departamento: <10}:", end=" ")
         for j in range(12):
             print(f"{ventas[i][j]:7.2f}", end=" ")
-        print() 
+        print()  
 
+
+insertar_ventas("Ropa")
+insertar_ventas("Deportes")
+insertar_ventas("Juguetería")
+
+mostrar_ventas()
+
+buscar_venta("Ropa", 3) 
+eliminar_ventas("Deportes") 
+
+mostrar_ventas()
